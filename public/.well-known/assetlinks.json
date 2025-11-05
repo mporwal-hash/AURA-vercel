@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.aura.panic.scholr.ageis",
+      "sha256_cert_fingerprints": [
+        "C4:32:28:DF:17:F9:44:A4:C2:C4:F4:57:7A:B0:C8:AB:C9:6F:B7:45:64:9F:F7:4B:D0:40:2F:1E:91:9D:65:48"
+      ]
+    }
+  }
+]

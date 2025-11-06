@@ -6,7 +6,7 @@ import path from "path";
  * You could also store this in a DB or external JSON.
  */
 const shortLinks = {
-  "ScholrAgeis": { brand: "ScholrAgeis", path: "/ScholrAgeis/home" },
+  "Scholrageis": { brand: "ScholrAgeis", path: "/ScholrAgeis/home" },
 };
 
 export default async function handler(req, res) {

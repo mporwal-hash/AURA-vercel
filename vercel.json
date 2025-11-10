@@ -1,16 +1,26 @@
 {
   "rewrites": [
-    { "source": "/.well-known/apple-app-site-association", "destination": "/.well-known/apple-app-site-association" },
-    { "source": "/r/:code", "destination": "/api/redirect?code=:code" }
+    {
+      "source": "/.well-known/apple-app-site-association",
+      "destination": "/public/.well-known/apple-app-site-association"
+    },
+    {
+      "source": "/.well-known/assetlinks.json",
+      "destination": "/public/.well-known/assetlinks.json"
+    }
   ],
   "headers": [
     {
       "source": "/.well-known/apple-app-site-association",
-      "headers": [{ "key": "Content-Type", "value": "application/json" }]
+      "headers": [
+        { "key": "Content-Type", "value": "application/json" }
+      ]
     },
     {
       "source": "/.well-known/assetlinks.json",
-      "headers": [{ "key": "Content-Type", "value": "application/json" }]
+      "headers": [
+        { "key": "Content-Type", "value": "application/json" }
+      ]
     }
   ]
 }

@@ -1,11 +1,9 @@
 {
-  "name": "universa;-links-service",
+  "name": "universal-links-service",
   "version": "1.0.0",
-  "main": "api/redirect.js",
+  "private": true,
   "scripts": {
-    "dev": "node api/redirect.js",
-    "build": "node generate-associations.js",
-    "prebuild": "node generate-associations.js"
+    "dev": "node api/redirect.js"
   },
   "dependencies": {}
 }

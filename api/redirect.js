@@ -50,7 +50,7 @@ export default async function handler(req, res) {
     }
   } else {
     // Desktop or unknown fallback → your website or landing page
-    redirectUrl = `https://your-website.com/`;
+    redirectUrl = `https://aura.services/`;
   }
 
   res.setHeader('Location', redirectUrl);

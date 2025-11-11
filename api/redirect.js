@@ -5,6 +5,7 @@ import brandConfig from '../brand-config.json';
 const shortLinks = {};
 brandConfig.brands.forEach(app => {
   const code = app.brand.toLowerCase();
+  // You can keep or remove basePath since we won't redirect to it, but leaving it is harmless
   const basePath = app.paths[0].replace('/*', '/home');
   shortLinks[code] = {
     brand: app.brand,
@@ -23,14 +24,12 @@ export default async function handler(req, res) {
     });
   }
 
-  const { brand, path: deepPath } = shortLinks[code];
+  const { brand } = shortLinks[code];
   const appConfig = brandConfig.brands.find(app => app.brand === brand);
 
   const userAgent = req.headers['user-agent'] || '';
   const isIOS = /iPhone|iPad|iPod/.test(userAgent);
   const isAndroid = /Android/.test(userAgent);
-  const protocol = req.headers['x-forwarded-proto'] || 'https';
-  const host = req.headers.host;
 
   let redirectUrl;
 
@@ -42,16 +41,16 @@ export default async function handler(req, res) {
       // iOS → App Store
       redirectUrl = `https://apps.apple.com/app/id${appConfig.iosAppStoreId}`;
     } else if (appConfig?.iosAppId) {
-      // fallback using bundleId (useful for debugging / test builds)
+      // fallback using bundleId (debug/test)
       const bundleId = appConfig.iosAppId.split('.').slice(1).join('.');
       redirectUrl = `https://apps.apple.com/app/${bundleId}`;
     } else {
-      // fallback → universal link
-      redirectUrl = `${protocol}://${host}${deepPath}`;
+      // iOS fallback → App Store homepage or your chosen fallback
+      redirectUrl = `https://apps.apple.com/`;
     }
   } else {
-    // Desktop or unknown → fallback page or deep link
-    redirectUrl = `${protocol}://${host}${deepPath}`;
+    // Desktop or unknown fallback → your website or landing page
+    redirectUrl = `https://your-website.com/`;
   }
 
   res.setHeader('Location', redirectUrl);

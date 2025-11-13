@@ -9,6 +9,10 @@
       {
         "appID": "27XW93998V.com.aura.panic.global.guardian",
         "paths": ["/GlobalGuardian/*"]
+      },
+      {
+        "appID": "27XW93998V.com.nreality.panic.aura.prod",
+        "paths": ["/RappidPanicApp/*"]
       }
     ]
   }

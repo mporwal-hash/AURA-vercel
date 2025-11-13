@@ -14,6 +14,14 @@
       "iosAppId": "27XW93998V.com.aura.panic.scholr.ageis",
       "iosAppStoreId": "6751275873",
       "paths": ["/GlobalGuardian/*"] 
+    },
+    {
+     "brand": "RappidPanicApp",
+      "androidPackage": "com.nreality.panic.aura.prod",
+      "androidCert": "C4:32:28:DF:17:F9:44:A4:C2:C4:F4:57:7A:B0:C8:AB:C9:6F:B7:45:64:9F:F7:4B:D0:40:2F:1E:91:9D:65:48",
+      "iosAppId": "27XW93998V.com.nreality.panic.aura.prod",
+      "iosAppStoreId": "1438490726",
+      "paths": ["/RappidPanicApp/*"] 
     }
   ]
 }

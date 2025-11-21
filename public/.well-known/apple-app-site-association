@@ -13,6 +13,10 @@
       {
         "appID": "27XW93998V.com.nreality.panic.aura.prod",
         "paths": ["/RappidPanicApp/*"]
+      },
+      {
+        "appID": "27XW93998V.com.nreality.panic.ppa.prod",
+        "paths": ["/PPA/*"]
       }
     ]
   }

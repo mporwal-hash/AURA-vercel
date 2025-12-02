@@ -25,6 +25,10 @@
       {
         "appID": "27XW93998V.com.aura.panic.culive",
         "paths": ["/CULive/*"]
+      },
+      {
+        "appID": "27XW93998V.com.aura.panic.adcocksos",
+        "paths": ["/AdcockSOS/*"]
       }
     ]
   }
